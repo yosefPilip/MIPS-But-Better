@@ -40,8 +40,6 @@ main:
 isNotPali:
     print "Input is not a palindrome."
 end:
-    li $v0, 10
-    syscall
 ```
 
 ### Example 2: FizzBuzz
@@ -81,8 +79,29 @@ increment:
     j loop
 
 end:
-    li $v0, 10
-    syscall
+```
+
+### Example 3: Math Operations
+```mips
+.text
+main:
+    addi $t0, $zero, 10
+    addi $t1, $zero, 5
+    
+    add $t2, $t0, $t1
+    sub $t3, $t0, $t1
+    mul $t4, $t0, $t1
+    div $t5, $t0, $t1
+    
+    max $t6, $t0, $t1
+    min $t7, $t0, $t1
+    avg $s0, $t0, $t1
+    
+    pow $s1, $t1, 3
+    factorial $s2, $t1
+    
+    lstri $s3, "Result: "
+    print "Math operations complete!\n"
 ```
 
 ## Why MIPS But Better?
